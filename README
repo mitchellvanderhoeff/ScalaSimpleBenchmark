@@ -6,8 +6,8 @@ Usage:
     }()
 
 If you want to specify an amount of times to run the operation:
-  benchmark {
-    // insert operation here
-  }(times = 100)
+    benchmark {
+      // insert operation here
+    }(times = 100)
 
 That's all!

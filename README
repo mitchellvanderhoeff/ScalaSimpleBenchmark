@@ -1,13 +1,16 @@
 Simple benchmark framework for scala using anonymous functions. 
 
 Usage:
-    benchmark {
-      // insert operation here
-    }()
+```scala
+benchmark {
+  // insert operation here
+}()
+```
 
 If you want to specify an amount of times to run the operation:
-    benchmark {
-      // insert operation here
-    }(times = 100)
-
+```scala
+benchmark {
+  // insert operation here
+}(times = 100)
+```
 That's all!

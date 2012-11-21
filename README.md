@@ -43,3 +43,4 @@ Sequential took 497.7 ms, parallel took 560.9 ms.
 ```
 
 That's all, folks!
+------------------

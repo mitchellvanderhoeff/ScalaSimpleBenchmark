@@ -1,1 +1,16 @@
-This file was created by IntelliJ IDEA (Leda) IU-122.813 for binding GitHub repository
+Simple benchmark framework for scala using anonymous functions. 
+
+Usage:
+```scala
+benchmark {
+  // insert operation here
+}()
+```
+
+If you want to specify an amount of times to run the operation:
+```scala
+benchmark {
+  // insert operation here
+}(times = 100)
+```
+That's all!

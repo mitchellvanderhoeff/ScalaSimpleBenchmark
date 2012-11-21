@@ -13,4 +13,4 @@ benchmark {
   // insert operation here
 }(times = 100)
 ```
-That's all!
+That's all, folks!

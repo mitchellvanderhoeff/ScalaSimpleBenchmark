@@ -1,32 +1,25 @@
+Description
+-----------
 Simple benchmark framework for scala using anonymous functions. 
-
-Usage:
+Usage
+-----
+To benchmark a code block, write
 ```scala
 benchmark {
   val doubles = (1 to 100000).map(math.sqrt(_))
   doubles.foldRight(0.0)(_ * _)
 }()
 ```
-Outputs
-```
-BENCHMARK: Start.
-BENCHMARK: End. Operation took 59.0 ms
-```
-
-If you want to specify an amount of times to run the operation:
+If you want to specify an amount of times to run the operation
+and average the benchmark time, specify the times parameter like so
 ```scala
 benchmark {
   val doubles = (1 to 100000).map(math.sqrt(_))
   doubles.foldRight(0.0)(_ * _)
 }(times = 100)
 ```
-Outputs
-```
-BENCHMARK: Start.
-BENCHMARK: End. Operation took 497.92 ms on average
-```
 
-The benchmark function returns the amount of milliseconds the benchmark took, so you can do things like
+The ```benchmark``` function returns the amount of milliseconds the benchmark took, so you can do things like
 ```scala
 val sequential = benchmark {
   val doubles = (1 to 1000000).seq.map(math.sqrt(_))
@@ -40,7 +33,7 @@ val parallel = benchmark {
 
 println(s"Sequential took $sequential ms, parallel took $parallel ms.")
 ```
-Produces
+This produces
 ```
 BENCHMARK: Start.
 BENCHMARK: End. Operation took 497.7 ms on average
